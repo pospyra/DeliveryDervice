@@ -31,7 +31,6 @@ namespace DeliveryDervice.Forms.Admin
             string query = "SELECT Код, Название FROM Роли;";
             DataTable result = databaseManager.GetData(query);
 
-            // Заполнение ComboBox ролями
             comboBoxRoles.DataSource = result;
             comboBoxRoles.DisplayMember = "Название";
             comboBoxRoles.ValueMember = "Код";
@@ -39,7 +38,6 @@ namespace DeliveryDervice.Forms.Admin
 
         private void FillData()
         {
-            // Запрос для получения данных о сотруднике
             string query = @"
                 SELECT Пользователи.ФИО, Пользователи.Логин, Пользователи.Пароль, Сотрудники.Телефон, Сотрудники.КодРоли
                 FROM Сотрудники
@@ -77,10 +75,11 @@ namespace DeliveryDervice.Forms.Admin
         {
             // Запрос для обновления данных о пользователе
             string query = @"
-                UPDATE Пользователи
-                SET ФИО = @FIO, Логин = @Login, Пароль = @Password
-                WHERE Код IN (SELECT КодПользователя FROM Сотрудники WHERE Код = @EmployeeId);
-            ";
+                            UPDATE Пользователи
+                            INNER JOIN Сотрудники ON Пользователи.Код = Сотрудники.КодПользователя
+                            SET Пользователи.ФИО = @FIO, Пользователи.Логин = @Login, Пользователи.Пароль = @Password
+                            WHERE Сотрудники.Код = @EmployeeId;
+                        ";
 
             // Параметры запроса
             OleDbParameter[] parameters = new OleDbParameter[]
@@ -150,7 +149,6 @@ namespace DeliveryDervice.Forms.Admin
             }
             catch (Exception ex)
             {
-                // Обработка ошибок при обновлении данных
                 MessageBox.Show($"Ошибка при обновлении данных сотрудника: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

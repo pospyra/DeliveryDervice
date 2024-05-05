@@ -144,7 +144,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(118, 380);
@@ -159,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(357, 450);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
@@ -173,6 +174,7 @@
             this.Controls.Add(this.textBoxFIO);
             this.Controls.Add(this.button1);
             this.Name = "EditEmployeeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateEmployeeForm";
             this.ResumeLayout(false);
             this.PerformLayout();

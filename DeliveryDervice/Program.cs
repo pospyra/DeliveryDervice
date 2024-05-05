@@ -1,6 +1,4 @@
 ﻿using DeliveryDervice.Forms;
-using DeliveryDervice.Forms.Courier;
-using DeliveryDervice.Forms.Storekeeper;
 using System;
 using System.Windows.Forms;
 
@@ -16,7 +14,7 @@ namespace DeliveryDervice
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminPanel());
+            Application.Run(new AuthForm());
         }
     }
 }

@@ -26,7 +26,6 @@ namespace DeliveryDervice.Forms.Admin
             string query = "SELECT Код, Название FROM Роли;";
             DataTable result = databaseManager.GetData(query);
 
-            // Заполнение ComboBox
             comboBoxRoles.DataSource = result;
             comboBoxRoles.DisplayMember = "Название";
             comboBoxRoles.ValueMember = "Код";
@@ -41,9 +40,9 @@ namespace DeliveryDervice.Forms.Admin
             // Создание параметров для запроса
             OleDbParameter[] parameters = new OleDbParameter[]
             {
-        new OleDbParameter("@roleCode", roleCode),
-        new OleDbParameter("@phone", phone),
-        new OleDbParameter("@userId", userId)
+                new OleDbParameter("@roleCode", roleCode),
+                new OleDbParameter("@phone", phone),
+                new OleDbParameter("@userId", userId)
             };
 
             // Выполнение запроса для добавления сотрудника
@@ -65,16 +64,16 @@ namespace DeliveryDervice.Forms.Admin
         {
             // Запрос для добавления пользователя
             string insertQuery = @"
-        INSERT INTO Пользователи (ФИО, Логин, Пароль)
-        VALUES (@fio, @login, @password);
-    ";
+                                    INSERT INTO Пользователи (ФИО, Логин, Пароль)
+                                    VALUES (@fio, @login, @password);
+                                ";
 
             // Параметры запроса
             OleDbParameter[] parameters = new OleDbParameter[]
             {
-        new OleDbParameter("@fio", fio),
-        new OleDbParameter("@login", login),
-        new OleDbParameter("@password", password)
+                new OleDbParameter("@fio", fio),
+                new OleDbParameter("@login", login),
+                new OleDbParameter("@password", password)
             };
 
             // Выполнение запроса для добавления пользователя
@@ -132,6 +131,5 @@ namespace DeliveryDervice.Forms.Admin
                 MessageBox.Show($"Ошибка при добавлении сотрудника: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }

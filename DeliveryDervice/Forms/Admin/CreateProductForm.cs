@@ -38,15 +38,15 @@ namespace DeliveryDervice.Forms.Admin
                 }
 
                 string query = @"
-            INSERT INTO Товары (Название, Цена, Количество, Фото)
-            VALUES (@productName, @productPrice, @productQuantity, @photoData);";
+                                INSERT INTO Товары (Название, Цена, Количество, Фото)
+                                VALUES (@productName, @productPrice, @productQuantity, @photoData);";
 
                 OleDbParameter[] parameters = new OleDbParameter[]
                 {
-            new OleDbParameter("@productName", productName),
-            new OleDbParameter("@productPrice", productPrice),
-            new OleDbParameter("@productQuantity", productQuantity),
-            new OleDbParameter("@photoData", photoData ?? (object)DBNull.Value) // Используйте DBNull.Value, если photoData равно null
+                    new OleDbParameter("@productName", productName),
+                    new OleDbParameter("@productPrice", productPrice),
+                    new OleDbParameter("@productQuantity", productQuantity),
+                    new OleDbParameter("@photoData", photoData ?? (object)DBNull.Value) 
                 };
 
                 // Выполнение запроса для вставки нового товара
@@ -64,7 +64,6 @@ namespace DeliveryDervice.Forms.Admin
                 MessageBox.Show("Пожалуйста, заполните все поля.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
 
         private bool ValidateForm()
         {

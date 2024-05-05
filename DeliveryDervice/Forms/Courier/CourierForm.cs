@@ -1,4 +1,5 @@
-﻿using SchoolCanteen.Data;
+﻿using DeliveryDervice.Data;
+using SchoolCanteen.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,7 +82,7 @@ namespace DeliveryDervice.Forms.Courier
         private void AddEmployeeOrderRecord(int orderId)
         {
             // Получаем текущего пользователя (сотрудника)
-            int currentEmployeeId = 12; // DataStorage.CurrentUserId;
+            int currentEmployeeId = DataStorage.CurrentUserId;
 
             // Получаем роль сотрудника из таблицы Сотрудники по его идентификатору
             string employeeRole = GetEmployeeRole(currentEmployeeId);

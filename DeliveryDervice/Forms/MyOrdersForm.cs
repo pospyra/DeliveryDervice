@@ -24,7 +24,7 @@ namespace DeliveryDervice.Forms
 
         public void FillOrders()
         {
-            int currentUserId = 1; //DataStorage.CurrentUserId;
+            int currentUserId = DataStorage.CurrentUserId;
 
             string query = @"
                             SELECT 

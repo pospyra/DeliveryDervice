@@ -74,7 +74,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(602, 585);
+            this.label6.Location = new System.Drawing.Point(814, 585);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 19);
@@ -100,7 +100,7 @@
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.Size = new System.Drawing.Size(526, 184);
+            this.dataGridView4.Size = new System.Drawing.Size(710, 184);
             this.dataGridView4.TabIndex = 42;
             this.dataGridView4.SelectionChanged += new System.EventHandler(this.dataGridView4_SelectionChanged);
             // 
@@ -108,11 +108,11 @@
             // 
             this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(606, 616);
+            this.dataGridView5.Location = new System.Drawing.Point(818, 616);
             this.dataGridView5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
-            this.dataGridView5.Size = new System.Drawing.Size(570, 104);
+            this.dataGridView5.Size = new System.Drawing.Size(523, 104);
             this.dataGridView5.TabIndex = 41;
             // 
             // label5
@@ -129,6 +129,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.Location = new System.Drawing.Point(872, 200);
@@ -143,6 +144,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(872, 109);
@@ -198,10 +200,12 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(151, 20);
             this.textBox1.TabIndex = 33;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.OrangeRed;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(590, 395);
@@ -216,6 +220,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(590, 437);
@@ -251,6 +256,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.OrangeRed;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(872, 154);
@@ -265,6 +271,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(590, 349);
@@ -300,7 +307,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(-315, 238);
+            this.label9.Location = new System.Drawing.Point(-211, 250);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(1657, 13);
             this.label9.TabIndex = 51;
@@ -318,9 +325,10 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Red;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(606, 536);
+            this.button7.Location = new System.Drawing.Point(818, 536);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(95, 29);
@@ -359,6 +367,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "AdminPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPanel";

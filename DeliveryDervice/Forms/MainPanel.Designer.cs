@@ -83,6 +83,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(709, 527);
@@ -120,6 +121,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Window;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(800, 720);
@@ -153,6 +155,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(824, 96);
             this.button1.Name = "button1";
@@ -202,12 +205,13 @@
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(696, 690);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 62);
+            this.button4.Size = new System.Drawing.Size(74, 43);
             this.button4.TabIndex = 30;
             this.button4.Text = " 📦";
             this.button4.UseVisualStyleBackColor = true;

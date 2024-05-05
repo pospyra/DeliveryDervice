@@ -134,6 +134,9 @@
     <EmbeddedResource Include="Forms\Admin\UpdateProductForm.resx">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuthForm.resx">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Courier\CourierForm.resx">
       <DependentUpon>CourierForm.cs</DependentUpon>
     </EmbeddedResource>

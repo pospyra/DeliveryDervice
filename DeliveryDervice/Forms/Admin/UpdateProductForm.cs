@@ -65,39 +65,36 @@ namespace DeliveryDervice.Forms.Admin
             decimal productPrice = Convert.ToDecimal(textBox3.Text);
             int productQuantity = Convert.ToInt32(textBox4.Text);
 
-            // Предполагается, что productId уже передан в форму
-            int productId = this.productId; // Это должно быть передано из другой части программы
+            int productId = this.productId; 
 
             byte[] photoData = null;
             if (pictureBox1.Image != null)
             {
-                // Убедитесь, что pictureBox1.Image содержит изображение перед сохранением
                 using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
                 {
                     try
                     {
-                        // Попробуйте сохранить изображение в потоке
+                        // Сохранить изображение в потоке
                         pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
                         photoData = ms.ToArray();
                     }
                     catch (Exception ex)
                     {
-                        // Если возникает ошибка, обработайте ее (например, выведите сообщение пользователю)
                         MessageBox.Show($"Ошибка сохранения изображения: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             else
             {
-                // Если изображение отсутствует, установите photoData в null
+                // Если изображение отсутствует
                 photoData = null;
             }
 
 
             string query = @"
-        UPDATE Товары
-        SET Название = @productName, Цена = @productPrice, Количество = @productQuantity, Фото = @photoData
-        WHERE Код = @productId;";
+                            UPDATE Товары
+                            SET Название = @productName, Цена = @productPrice, Количество = @productQuantity, Фото = @photoData
+                            WHERE Код = @productId;";
 
             // Параметр для @photoData
             OleDbParameter photoDataParameter;
@@ -113,11 +110,11 @@ namespace DeliveryDervice.Forms.Admin
             // Создаем параметры запроса
             OleDbParameter[] parameters = new OleDbParameter[]
             {
-        new OleDbParameter("@productName", productName),
-        new OleDbParameter("@productPrice", productPrice),
-        new OleDbParameter("@productQuantity", productQuantity),
-        photoDataParameter,
-        new OleDbParameter("@productId", productId) // Параметр для productId
+                new OleDbParameter("@productName", productName),
+                new OleDbParameter("@productPrice", productPrice),
+                new OleDbParameter("@productQuantity", productQuantity),
+                photoDataParameter,
+                new OleDbParameter("@productId", productId) 
             };
 
             // Выполняем запрос
@@ -134,6 +131,7 @@ namespace DeliveryDervice.Forms.Admin
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //Выбор изображения
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png|All Files|*.*";

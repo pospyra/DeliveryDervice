@@ -1,4 +1,5 @@
-﻿using SchoolCanteen.Data;
+﻿using DeliveryDervice.Data;
+using SchoolCanteen.Data;
 using System;
 using System.Data;
 using System.Data.OleDb;
@@ -118,7 +119,7 @@ namespace DeliveryDervice.Forms.Storekeeper
         private void AddEmployeeOrderRecord(int orderId)
         {
             // Получаем текущего пользователя (сотрудника)
-            int currentEmployeeId = 11; // DataStorage.CurrentUserId;
+            int currentEmployeeId = DataStorage.CurrentUserId;
 
             // Получаем роль сотрудника из таблицы Сотрудники по его идентификатору
             string employeeRole = GetEmployeeRole(currentEmployeeId);

@@ -32,10 +32,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxContact = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxFIO = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -81,37 +81,37 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "ФИО";
             // 
-            // textBox4
+            // textBoxContact
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(46, 244);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(264, 24);
-            this.textBox4.TabIndex = 33;
+            this.textBoxContact.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxContact.Location = new System.Drawing.Point(46, 244);
+            this.textBoxContact.Name = "textBoxContact";
+            this.textBoxContact.Size = new System.Drawing.Size(264, 24);
+            this.textBoxContact.TabIndex = 33;
             // 
-            // textBox3
+            // textBoxPassword
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(46, 176);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(264, 24);
-            this.textBox3.TabIndex = 32;
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPassword.Location = new System.Drawing.Point(46, 176);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(264, 24);
+            this.textBoxPassword.TabIndex = 32;
             // 
-            // textBox2
+            // textBoxLogin
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(46, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(264, 24);
-            this.textBox2.TabIndex = 31;
+            this.textBoxLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLogin.Location = new System.Drawing.Point(46, 115);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(264, 24);
+            this.textBoxLogin.TabIndex = 31;
             // 
-            // textBox1
+            // textBoxFIO
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(46, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 24);
-            this.textBox1.TabIndex = 30;
+            this.textBoxFIO.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFIO.Location = new System.Drawing.Point(46, 51);
+            this.textBoxFIO.Name = "textBoxFIO";
+            this.textBoxFIO.Size = new System.Drawing.Size(264, 24);
+            this.textBoxFIO.TabIndex = 30;
             // 
             // button1
             // 
@@ -124,6 +124,7 @@
             this.button1.TabIndex = 29;
             this.button1.Text = "Зарегистрироваться";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -135,6 +136,7 @@
             this.button2.TabIndex = 38;
             this.button2.Text = "Войти";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -158,12 +160,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxContact);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxLogin);
+            this.Controls.Add(this.textBoxFIO);
             this.Controls.Add(this.button1);
             this.Name = "RegistrationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,10 +179,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxContact;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxFIO;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;

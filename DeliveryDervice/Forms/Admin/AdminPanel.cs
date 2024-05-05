@@ -51,6 +51,12 @@ namespace DeliveryDervice.Forms
             dataGridView3.Columns["Название"].Width = 150;
             dataGridView3.Columns["Цена"].Width = 100;
             dataGridView3.Columns["Количество"].Width = 100;
+
+            if (dataGridView3.Rows.Count > 0)
+            {
+                dataGridView3.Rows[0].Selected = true; 
+                dataGridView3.CurrentCell = dataGridView3.Rows[0].Cells[0];
+            }
         }
 
         public void FillEmployees()
@@ -95,11 +101,17 @@ namespace DeliveryDervice.Forms
             dataGridView4.DataSource = result;
 
             // Настраиваем ширину колонок
-            dataGridView4.Columns["Код"].Width = 60;
-            dataGridView4.Columns["Клиент"].Width = 150;
+            dataGridView4.Columns["Код"].Width = 50;
+            dataGridView4.Columns["Клиент"].Width = 180;
             dataGridView4.Columns["Статус"].Width = 100;
-            dataGridView4.Columns["Дата заказа"].Width = 100;
-            dataGridView4.Columns["Адрес доставки"].Width = 200;
+            dataGridView4.Columns["Дата заказа"].Width = 110;
+            dataGridView4.Columns["Адрес доставки"].Width = 180;
+
+            if (dataGridView4.Rows.Count > 0)
+            {
+                dataGridView4.Rows[0].Selected = true; // Выделяем первую строку
+                dataGridView4.CurrentCell = dataGridView4.Rows[0].Cells[0]; // Устанавливаем текущую ячейку
+            }
         }
 
 
@@ -374,5 +386,32 @@ namespace DeliveryDervice.Forms
                 MessageBox.Show("Пожалуйста, выберите сотрудника для редактирования.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = textBox1.Text.Trim();
+
+            // SQL-запрос для поиска сотрудников по имени или телефону
+            string query = @"
+        SELECT Сотрудники.Код AS [Код], Пользователи.ФИО AS [Имя], Сотрудники.Телефон AS [Телефон], Роли.Название AS [Роль]
+        FROM (Сотрудники
+            INNER JOIN Пользователи ON Сотрудники.КодПользователя = Пользователи.Код)
+        INNER JOIN Роли ON Сотрудники.КодРоли = Роли.Код
+        WHERE (Пользователи.ФИО LIKE @searchText OR Сотрудники.Телефон LIKE @searchText);
+    ";
+
+            // Параметры для запроса
+            OleDbParameter[] parameters = new OleDbParameter[]
+            {
+        new OleDbParameter("@searchText", "%" + searchText + "%")
+            };
+
+            // Получаем данные из базы данных
+            DataTable result = databaseManager.GetData(query, parameters);
+
+            // Обновляем dataGridView1 результатами поиска
+            dataGridView1.DataSource = result;
+        }
+
     }
 }
